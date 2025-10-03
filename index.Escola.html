@@ -1,0 +1,215 @@
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Sunnydale School</title>
+    <style>
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+            margin: 32px 0 24px 0;
+        }
+        .card-img {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+            overflow: hidden;
+            width: 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.2s;
+        }
+        .card-img img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+        .card-img p {
+            margin: 12px 0 16px 0;
+            color: #094d91;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        .section-title {
+            margin-top: 40px;
+            color: #1976d2;
+            font-size: 1.4em;
+            letter-spacing: 1px;
+        }
+        body {
+            background: linear-gradient(120deg, #b7b9b7 0%, #f7e967 100%);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .menu-flutuante {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #094d91;
+            color: #fff;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 12px 0;
+        }
+        .menu-flutuante a {
+            color: #f7e967;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.2s;
+        }
+        .menu-flutuante a:hover {
+            color: #094d91;
+            background: #f7e967;
+            border-radius: 6px;
+            padding: 4px 10px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 90px auto 0 auto;
+            text-align: center;
+            background: #fff;
+            border-radius: 18px;
+            padding: 32px 16px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+        }
+        .flip-box {
+            background-color: transparent;
+            width: 320px;
+            height: 200px;
+            margin: 0 auto 24px auto;
+            perspective: 1000px;
+        }
+        .flip-box-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .flip-box:hover .flip-box-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-box-front, .flip-box-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .flip-box-front {
+            background: #094d91;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flip-box-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .flip-box-back {
+            background: #f7e967;
+            color: #094d91;
+            transform: rotateY(180deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3em;
+            padding: 20px;
+        }
+        h1, h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #094d91;
+        }
+        #proximos-eventos {
+            background-color: #f7e967;
+            border-radius: 8px;
+            padding: 8px 0;
+        }
+        .outdoor {
+            background-color: #b7eeb7;
+            padding: 5px;
+            border: 1px solid #B0E0E6;
+        }
+        ul {
+            background: #e0e7ef;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+        p, li {
+            color: #222c36;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu-flutuante">
+        <a href="#inicio">Início</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+            <div class="section-title">Nossa Estrutura</div>
+            <div class="galeria">
+                <div class="card-img">
+                    <img src="Sacada.png" alt="Fachada da Escola">
+                    <p>Fachada da Escola</p>
+                </div>
+                <div class="card-img">
+                    <img src="ChatGPT Image 1 de out. de 2025, 14_41_52.png" alt="Alunos em sala de aula">
+                    <p>Alunos em sala de aula</p>
+                </div>
+                <div class="card-img">
+                    <img src="biblioteca da escola.png" alt="Biblioteca moderna">
+                    <p>Biblioteca moderna</p>
+                </div>
+                <div class="card-img">
+                    <img src="Quadra.png" alt="Quadra de esportes">
+                    <p>Quadra de esportes</p>
+                </div>
+            </div>
+    <div class="container" id="inicio">
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="Designer.png" alt="Logo Escola">
+                </div>
+                <div class="flip-box-back">
+                    <div>
+                        <strong>Sunnydale School</strong><br>
+                        Educação, criatividade e futuro brilhante!<br>
+                        <span style="color:#094d91;">Bem-vindo!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1>Escola Sunnydale</h1>
+        <p>Bem-vindo à Sunnydale School, dedicada a promover o amor pelo aprendizado em todos os alunos</p>
+        <h2>Missão</h2>
+        <p>Nossa missão é fornecer uma educação de qualidade que prepare todas as crianças para um futuro de sucesso.</p>
+        <h2 id="proximos-eventos">Próximos Eventos</h2>
+        <ul id="eventos">
+            <li class="outdoor" title="Tipo de Evento: Outdoor">Feira de Ciências - <span style="color: #388e3c;">10 de junho</span></li>
+            <li class="outdoor" data-event-type="outdoor" title="Tipo de Evento: Outdoor">Exposição de Arte - <span style="color: #fbc02d;">15 de junho</span></li>
+            <li class="outdoor" data-event-type="outdoor" title="Tipo de Evento: Outdoor">Dia do Esporte - <span style="color: #1976d2;">20 de junho</span></li>
+        </ul>
+        <h2 id="contato">Contato</h2>
+        <p>Email: <span title="Clique para copiar o e-mail">info@sunnydaleschool.com</span></p>
+        <p>Telefone: <span title="Clique para copiar o e-mail">555-1234</span></p>
+        <!-- Imagine clicar aqui e ver uma mensagem: 'Obrigado por entrar em contato!' -->
+    </div>
+</body>
+</html>
